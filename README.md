@@ -1,4 +1,4 @@
-# book API
+# Book API
 This repository contains a CRUD API to manage a list of Books
 
 
