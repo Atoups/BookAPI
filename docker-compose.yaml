@@ -1,0 +1,43 @@
+# Compose file version 3.3
+version: '3.3'
+
+
+# Top-Level Services and their settings
+services:
+
+  # api service
+  api:
+    image: bookapi            # name the built image 'bookapi'
+    build: .                  # path to the Dockerfile build context
+    ports:
+      - "8080:8080"           # expose ports 8080
+    links:
+      - mongodb               #link to the 'mongodb' service container
+    depends_on:
+      - mongodb               # express dependency to the 'mongodb' service
+    networks:
+      - api-net               # join top-level network 'api-net'
+
+  # mongodb service
+  mongodb:
+    image: mongo              # name the built image 'bookapi'
+    ports:
+      - "27017:27017"         # expose ports 27017
+    volumes:
+      - "mongodata:/data/db"  # mounted host path on top-level mongodata volume
+    networks:
+      - api-net               # join top-level network 'api-net'
+
+
+# Top-Level Volumes to persist user data
+volumes:
+  # mongodata volume
+  mongodata:                  # empty volume uses the default driver configured by the local driver
+
+
+# Top-Level Networks specify networks to be created
+networks:
+  # api-net network
+  api-net:
+    # specify driver for the network
+    driver: bridge            # bridge network on a single host
