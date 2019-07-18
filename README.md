@@ -1,13 +1,11 @@
-# Book API
+# book API
 This repository contains a CRUD API to manage a list of Books
 
-
 ## API Documentation
-
 * __GET__       /book
-    * Retrieves all the books in the list of books
-    * Example request: localhost:8080/book
-    * Example **200** response:
+    * retrieves all the books in the list of books
+    * example request: localhost:8080/book
+    * example **200** response:
         ```
         [
             {
@@ -35,7 +33,7 @@ This repository contains a CRUD API to manage a list of Books
             {
                 error: "Invalid Book ID"
             }
- ```
+        ```
 * __GET__       /book/{id}
     * retrieves one book with the specified id parameter
     * example request: localhost:8080/book
@@ -135,11 +133,10 @@ This repository contains a CRUD API to manage a list of Books
            }
         ```
 
-## Instructions:
+## Instructions
 _Prerequisites: Be sure to have the Go environment and Docker installed on the local machine in order for the project to run properly_
 
 In order to run this project from a docker container, please follow the following steps:
-
 
 * Pull the project from the book github repo
 * Open the project from any IDE
