@@ -136,8 +136,6 @@ This repository contains a CRUD API to manage a list of Books
         ```
 
 ## Instructions:
-
-
 _Prerequisites: Be sure to have the Go environment and Docker installed on the local machine in order for the project to run properly_
 
 In order to run this project from a docker container, please follow the following steps:
@@ -151,6 +149,6 @@ In order to run this project from a docker container, please follow the followin
 * When the build is complete, and the containers are running, now access the API running on port 8080
 * Use cURL or PostMan to test the API
 * To run the unit tests: 
-    - make sure the docker containers are running 
-    - access the book directory in the terminal 
-    - run the command _go test book/controllers_
+    * make sure the docker containers are running 
+    * access the book directory in the terminal 
+    * run the command _go test book/controllers_
