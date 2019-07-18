@@ -1,7 +1,8 @@
-# book API
+# Book API
 This repository contains a CRUD API to manage a list of Books
 
-## API Documentation
+
+## API-Documentation
 * __GET__       /book
     * retrieves all the books in the list of books
     * example request: localhost:8080/book
