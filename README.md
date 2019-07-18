@@ -1,5 +1,7 @@
-# Book API
+# Book API - NOTE: THIS IS STILL IN TESTING.
 CRUD API Repository to manage a list of Books using Golang.
+
+
 
 
 ## API-Documentation
